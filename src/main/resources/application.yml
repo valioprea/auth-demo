@@ -7,7 +7,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop #everytime the application starts, it will drop the tables and create them again
-    show-sql: true #show the sql queries in the console
+#    show-sql: true #show the sql queries in the console
     properties:
       hibernate:
         format_sql: true #format the sql queries in the console
