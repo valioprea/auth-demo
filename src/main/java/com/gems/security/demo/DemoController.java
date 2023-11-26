@@ -23,9 +23,10 @@ public class DemoController {
     public ResponseEntity<String> sayHello(
             @RequestHeader(HttpHeaders.AUTHORIZATION) String authToken
     ) {
-//        var a = jwtService.extractUsername(authToken);
-//        System.out.println(a);
-        // TODO: I have problems with this. Not sure how to correctly extract the authToken
+
+        var jwt = authToken.substring(7);
+        var username = jwtService.extractUsername(jwt);
+        System.out.println("username = " + username);
 
         return ResponseEntity.ok("hello from secured endpoint");
     }
